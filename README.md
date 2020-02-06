@@ -89,9 +89,9 @@ $request->setMethod(HTTP_METH_POST);
 
 $body = json_encode(array(
     "fac_id"  => "133",
-	"fac_referencia" => "FL109",
-	"tipo" => "atualizacao",
-	"mensagem" => "O cliente está interessado em outro imóvel."
+    "fac_referencia" => "FL109",
+    "tipo" => "atualizacao",
+    "mensagem" => "O cliente está interessado em outro imóvel."
 ));
 
 $request->setHeaders(array(
@@ -122,9 +122,9 @@ request.AddHeader("Authorization", "Bearer __TOKEN_CLIENTE__");
 
 var body = new {
     "fac_id" = "133",
-	"fac_referencia" = "FL109",
-	"tipo" = "atualizacao",
-	"mensagem" = "O cliente está interessado em outro imóvel."
+    "fac_referencia" = "FL109",
+    "tipo" = "atualizacao",
+    "mensagem" = "O cliente está interessado em outro imóvel."
 };
 
 request.AddParameter("undefined", JsonConvert.SerializeObject(body), ParameterType.RequestBody);
