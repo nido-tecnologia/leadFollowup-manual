@@ -6,6 +6,11 @@
 - \_\_TOKEN_CLIENTE__
    - Token JWT, Ex: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9uaWRvLmNvbS5iciIsImF1ZCI6Imh0dHA6XC9cL25pZG9pbW92ZWwuY29tLmJyIiwiaWF0IjoxNTQ2MzA4MDAwLCJuYmYiOjE1NDYzMDgwMDAsImRhdGEiOnsiY2xpZW50ZV9pZCI6IjMxIiwiY29kYWdlbmNpYSI6Ik5JIiwid2ViX2NvbmZpZ19pZCI6IjgyIn19.VARfNYjb9yIY7pB01HcUJipMC1HEnaG028307Elfz1s
 
+## Autenticação
+Sistema de autenticação com [Bearer Token](https://tools.ietf.org/html/rfc6750) e validação de User-Agent.<br />
+Lembrar se sempre colocar na requisição os cabeçalhos:
+- `User-Agent: Nido/1.0.0 Decussi/1.0.0`
+- `Authorization: Bearer __TOKEN_CLIENTE__`
 
 ## Campos do JSON
 - **fac_id**, identificador da FAC
@@ -28,9 +33,9 @@
 |-:|-|
 |201|Follow-up inserido com sucesso|
 |40x|Problemas na validação dos dados enviados|
-|50x|Problema generico ou de Token|
+|50x|Problema de Token ou genérico|
 
-Todos os erros informados retornam um descritivo explicando o problema.
+`Todos os erros informados retornam um descritivo explicando o problema.`
 
 # Exemplos de retornos
 ```json
